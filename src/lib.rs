@@ -1,8 +1,11 @@
 extern crate dusk_api;
 extern crate dusk_syntax;
 
+mod text_preprocessing;
+
 use std::any::{Any, TypeId};
 use dusk_api::{Freight, export_plugin, Function, RuntimeError};
+use dusk_syntax::{code_reference, warn, ElementReference, Element};
 
 export_plugin!("precompiler", "0.0.0", Precompiler);
 
